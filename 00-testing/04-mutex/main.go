@@ -17,7 +17,6 @@ func main() {
 		go func() {
 			mt.Lock()
 			v := incremento
-			runtime.Gosched()
 			v++
 			fmt.Println(incremento)
 			incremento = v
