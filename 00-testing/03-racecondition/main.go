@@ -12,10 +12,10 @@ func main() {
 	gs := 100
 	wg.Add(gs)
 
-	for i := 0; i < gs ; i ++ {
+	for i := 0; i < gs; i++ {
 		go func() {
 			v := incremento
-			git runtime.Gosched()
+			runtime.Gosched()
 			v++
 			fmt.Println(incremento)
 			incremento = v

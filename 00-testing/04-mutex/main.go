@@ -1,9 +1,9 @@
 package main
 
 import (
-"fmt"
-"runtime"
-"sync"
+	"fmt"
+	"runtime"
+	"sync"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	wg.Add(gs)
 	var mt sync.Mutex
 
-	for i := 0; i < gs ; i ++ {
+	for i := 0; i < gs; i++ {
 		go func() {
 			mt.Lock()
 			v := incremento

@@ -12,9 +12,9 @@ func main() {
 	gs := 100
 	wg.Add(gs)
 
-	for i := 0; i < gs ; i ++ {
+	for i := 0; i < gs; i++ {
 		go func() {
-			atomic.AddInt64(&incremento,1)
+			atomic.AddInt64(&incremento, 1)
 			fmt.Println(atomic.LoadInt64(&incremento))
 			wg.Done()
 		}()

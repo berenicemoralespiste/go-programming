@@ -16,7 +16,6 @@ func main() {
 	go routine1()
 	go routine2()
 
-
 	fmt.Printf("Numero de CPU medio : %v\n", runtime.NumCPU())
 	fmt.Printf("Numero de go routines medio : %v\n", runtime.NumGoroutine())
 	wg.Wait()
